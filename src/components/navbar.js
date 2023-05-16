@@ -1,5 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function navbar() {
-  return <div></div>;
+  return (
+    <header>
+      <nav>
+        <Link to="/"></Link>
+        <Link to="/game"></Link>
+      </nav>
+    </header>
+  );
 }
