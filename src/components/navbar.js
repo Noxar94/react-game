@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import Modal from "../components/modal";
 
 export default function Navbar() {
   const navRef = useRef();
@@ -14,7 +15,7 @@ export default function Navbar() {
       <nav ref={navRef}>
         <Link to="/"> Home</Link>
         <Link to="/game">Game</Link>
-        <button className="Login-btn">Login</button>
+        <Modal />
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
