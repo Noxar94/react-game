@@ -1,9 +1,10 @@
 import React from "react";
+import GameLogic from "../components/gameLogic";
 
-export default function game() {
+export default function Game() {
   return (
     <div>
-      <h2>GAME</h2>
+      <GameLogic />
     </div>
   );
 }
