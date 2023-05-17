@@ -1,5 +1,6 @@
 import React, { useState } from "react"; //useState
 import Register from "../components/Register";
+import Login from "../components/Login";
 import { FaTimes } from "react-icons/fa";
 
 import "../styles/modal.css";
@@ -20,7 +21,7 @@ export default function Modal() {
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
-        Register
+        Register/Login
       </button>
 
       {modal && (
@@ -30,7 +31,7 @@ export default function Modal() {
             <button className="close-modal" onClick={toggleModal}>
               <FaTimes />
             </button>
-            <Register />
+            <Login />
           </div>
         </div>
       )}
