@@ -13,9 +13,17 @@ export default function Navbar() {
     <header>
       <h2>Noxar</h2>
       <nav ref={navRef}>
-        <Link to="/"> Home</Link>
-        <Link to="/game">Game</Link>
-        <Modal />
+        <ul>
+          <li>
+            <Link to="/"> Home</Link>
+          </li>
+          <li>
+            <Link to="/game">Game</Link>
+          </li>
+          <li>
+            <Modal />
+          </li>
+        </ul>
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

@@ -1,5 +1,6 @@
 import React, { useState } from "react"; //useState
 import Register from "../components/Register";
+import { FaTimes } from "react-icons/fa";
 
 import "../styles/modal.css";
 
@@ -19,7 +20,7 @@ export default function Modal() {
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
-        Login
+        Register
       </button>
 
       {modal && (
@@ -27,7 +28,7 @@ export default function Modal() {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
             <button className="close-modal" onClick={toggleModal}>
-              CLOSE
+              <FaTimes />
             </button>
             <Register />
           </div>
