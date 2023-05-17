@@ -1,5 +1,5 @@
 import React, { useState } from "react"; //useState
-import Form from "../components/form";
+import Register from "../components/Register";
 
 import "../styles/modal.css";
 
@@ -29,7 +29,7 @@ export default function Modal() {
             <button className="close-modal" onClick={toggleModal}>
               CLOSE
             </button>
-            <Form />
+            <Register />
           </div>
         </div>
       )}

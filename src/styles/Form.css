@@ -33,15 +33,6 @@ input[type="email"] {
   height: 30px;
 }
 
-input[type="text"],
-input[type="email"],
-select {
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255, 0.2);
-  color: white;
-}
-
 button[type="submit"] {
   min-width: 20%;
   background-color: #ffffff80;
