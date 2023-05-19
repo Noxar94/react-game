@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/login.css";
 
@@ -63,8 +63,6 @@ const Login = () => {
         <button className="Login-btn" type="submit" onClick={handleSubmit}>
           Login
         </button>
-
-        <Link to={"/"}>Dont have an account? click me!</Link>
       </form>
     </div>
   );

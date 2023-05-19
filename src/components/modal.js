@@ -1,15 +1,20 @@
-import React, { useState } from "react"; //useState
-import Register from "../components/Register";
+import React, { useState } from "react";
 import Login from "../components/Login";
+import Register from "../components/Register";
 import { FaTimes } from "react-icons/fa";
 
 import "../styles/modal.css";
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
+  const [activeComponent, setActiveComponent] = useState("Login");
 
   const toggleModal = () => {
     setModal(!modal);
+  };
+
+  const toggleComponent = () => {
+    setActiveComponent(activeComponent === "Login" ? "Register" : "Login");
   };
 
   if (modal) {
@@ -31,7 +36,11 @@ export default function Modal() {
             <button className="close-modal" onClick={toggleModal}>
               <FaTimes />
             </button>
-            <Login />
+
+            {activeComponent === "Login" ? <Login /> : <Register />}
+            <button className="switch-btn" onClick={toggleComponent}>
+              Switch to {activeComponent === "Login" ? "Register" : "Login"}
+            </button>
           </div>
         </div>
       )}

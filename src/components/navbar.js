@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import Modal from "../components/modal";
+import Modal from "../components/Modal";
 
 export default function Navbar() {
   const navRef = useRef();
