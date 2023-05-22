@@ -5,7 +5,7 @@ header {
 
   height: 80px;
   padding: 0 50px;
-  background-color: white;
+  background: linear-gradient(0.25turn, #bbbbbb, #727272, #949494, #dadada);
   box-shadow: 0 0 20px white;
 }
 

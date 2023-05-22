@@ -1,9 +1,23 @@
 import React from "react";
+import "../styles/Home.css";
 
 export default function Home() {
   return (
-    <div>
-      <h2 className="h2-pages">HOME</h2>
+    <div className="home-container">
+      <h1>Hello and welcome</h1>
+      <div className="home-content">
+        <div className="left-content">
+          <h3>This is my game project! Instructions on the right</h3>
+        </div>
+        <div className="right-content">
+          <ul>
+            <li>Register an account!</li>
+            <li>Log in!</li>
+            <li>Go to game</li>
+            <li>Play!</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
