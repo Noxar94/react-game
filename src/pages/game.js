@@ -1,9 +1,6 @@
 import React from "react";
+import GameLogic from "../components/GameLogic";
 
 export default function Game() {
-  return (
-    <div>
-      <h2 className="h2-pages">GAME</h2>
-    </div>
-  );
+  return <GameLogic />;
 }
