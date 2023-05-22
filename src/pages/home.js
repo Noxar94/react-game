@@ -7,7 +7,10 @@ export default function Home() {
       <h1>Hello and welcome</h1>
       <div className="home-content">
         <div className="left-content">
-          <h3>This is my game project! Instructions on the right</h3>
+          <h3>
+            This is my project! how to get started <br /> follow the
+            Instructions on the right
+          </h3>
         </div>
         <div className="right-content">
           <ul>
