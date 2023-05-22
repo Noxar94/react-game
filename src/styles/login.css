@@ -23,3 +23,7 @@ button[type="submit"] {
 .register-link:hover {
   color: red;
 }
+
+.container ::placeholder {
+  color: rgb(255, 255, 255);
+}

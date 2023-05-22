@@ -3,24 +3,30 @@ import "../styles/GameLogic.css";
 import BackgroundVideo from "../videos/Numbers.mp4";
 
 const GameLogic = () => {
+  // All default States.
   const [guess, setGuess] = useState("");
   const [response, setResponse] = useState("");
   const [tries, setTries] = useState(0);
   const [randomNumber, setRandomNumber] = useState(makeRandomNumber(null));
   const [difficulty, setDifficulty] = useState("None");
 
+  // set guess in state.
   function handleGuess(event) {
     setGuess(event.target.value);
   }
 
+  // User guess submit
   function handleSubmit(event) {
+    // prevent default from refreshing.
     event.preventDefault();
     const userGuess = parseInt(guess);
 
+    // each guess press add 1 to state.
     if (userGuess) {
       setTries(tries + 1);
     }
 
+    // if the answer is right or higher or lower.
     if (userGuess === randomNumber) {
       setResponse(`Winner! You guessed the number in ${tries + 1} tries.`);
       setRandomNumber(null);
@@ -32,6 +38,7 @@ const GameLogic = () => {
     setGuess("");
   }
 
+  // set difficulty!
   function handleDifficulty(event) {
     const difficultyLevel = event.target.value;
 
@@ -46,7 +53,7 @@ const GameLogic = () => {
     }
     setDifficulty(difficultyLevel);
   }
-
+  // making a Random number to guess
   function makeRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
