@@ -18,7 +18,7 @@ export default function Navbar() {
             <Link to="/"> Home</Link>
           </li>
           <li>
-            <Link to="/game">Game</Link>
+            <Link to="/user">Game</Link>
           </li>
           <li>
             <Modal />

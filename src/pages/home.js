@@ -8,8 +8,8 @@ export default function Home() {
       <div className="home-content">
         <div className="left-content">
           <h3>
-            This is my project! <br /> how to get started? <br /> follow the
-            Instructions on the right
+            <h2 style={{ color: "red" }}>Game not starting ?</h2> <br />{" "}
+            <h3>Follow the green Instructions on the right</h3>
           </h3>
         </div>
         <div className="right-content">

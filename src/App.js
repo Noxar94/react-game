@@ -4,6 +4,7 @@ import Game from "./pages/game";
 import Home from "./pages/home";
 
 import Navbar from "./components/navbar";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -12,7 +13,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Game" element={<Game />} />
+        <Route
+          path="/user"
+          element={
+            <PrivateRoute>
+              <Game />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </>
   );

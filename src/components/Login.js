@@ -29,7 +29,7 @@ const Login = () => {
       });
 
     if (user && user.email === email && user.password === password) {
-      navigate("/game");
+      navigate("/user");
 
       localStorage.setItem("user", JSON.stringify(user.id));
     } else {
