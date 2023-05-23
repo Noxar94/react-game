@@ -15,8 +15,8 @@
   flex-direction: column;
 
   width: 500px;
-  border: 2px solid white;
-  box-shadow: 0 0 15px white;
+  border: 5px solid rgb(0, 0, 0);
+  box-shadow: 0 0 25px rgb(255, 255, 255);
 }
 
 .gameform-container {

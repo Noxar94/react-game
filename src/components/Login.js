@@ -28,11 +28,14 @@ const Login = () => {
         console.log(error);
       });
 
-    if (user.email === email && user.password === password) {
-      navigate("/");
+    if (user && user.email === email && user.password === password) {
+      navigate("/game");
 
       localStorage.setItem("user", JSON.stringify(user.id));
+    } else {
+      alert("Wrong email or password! try again");
     }
+
     setEmail("");
     setPassword("");
   };

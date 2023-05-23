@@ -8,7 +8,7 @@ export default function Home() {
       <div className="home-content">
         <div className="left-content">
           <h3>
-            This is my project! how to get started <br /> follow the
+            This is my project! <br /> how to get started? <br /> follow the
             Instructions on the right
           </h3>
         </div>
