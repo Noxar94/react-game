@@ -12,7 +12,12 @@ const Register = () => {
     if (user) return user;
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (email === "" || password === "") {
+      alert("all fields are required");
+    }
     const user = await axios
       .get("/users")
       .then((res) => checkEmail(res.data, email));

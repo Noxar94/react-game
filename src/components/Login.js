@@ -21,6 +21,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (email === "" || password === "") {
+      alert("all fields are required");
+    }
+
     const user = await axios
       .get("/users")
       .then((res) => checkUser(res.data, email, password))
