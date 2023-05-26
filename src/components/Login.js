@@ -23,6 +23,7 @@ const Login = () => {
 
     if (email === "" || password === "") {
       alert("all fields are required");
+      return;
     }
 
     const user = await axios

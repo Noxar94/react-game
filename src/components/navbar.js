@@ -9,6 +9,7 @@ export default function Navbar() {
   const showNavbar = () => {
     navRef.current.classList.toggle("resp-nav");
   };
+
   return (
     <header>
       <h2>Noxar</h2>
@@ -20,6 +21,7 @@ export default function Navbar() {
           <li>
             <Link to="/user">Game</Link>
           </li>
+
           <li>
             <Modal />
           </li>
