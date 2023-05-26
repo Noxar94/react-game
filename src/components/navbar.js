@@ -37,11 +37,11 @@ export default function Navbar(handleSubmit) {
             </li>
           )}
           {auth && (
-            <div title={UserName} className="dropdown">
+            <div className="dropdown">
               <button className="dropbtn">User</button>
               <div className="dropdown-content">
-                <a>Account</a>
-                <a onClick={handlelogOut}>Logout</a>
+                <Link>Account</Link>
+                <Link onClick={handlelogOut}>Logout</Link>
               </div>
             </div>
           )}
