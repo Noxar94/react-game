@@ -37,11 +37,13 @@ const Login = () => {
       navigate("/user");
 
       localStorage.setItem("user", JSON.stringify(user.id));
+      window.location.reload();
     } else {
       alert("Wrong email or password! try again");
     }
 
     setEmail("");
+    setPassword("");
     setPassword("");
   };
 
