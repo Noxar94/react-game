@@ -6,8 +6,8 @@ header {
 
   height: 80px;
   padding: 0 50px;
-  background: rgba(255, 255, 255, 0.479);
-  box-shadow: 0 0 20px white;
+  background: rgba(253, 240, 54, 0.479);
+  box-shadow: 0 0 5px rgb(252, 210, 23);
 }
 
 nav {
@@ -32,7 +32,7 @@ nav li {
 
 nav a {
   font-size: 18px;
-  font-weight: 600;
+
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -84,7 +84,6 @@ header .nav-btn {
 
 .dropdown-content a {
   font-size: 18px;
-  font-weight: 600;
   color: rgb(255, 255, 255);
   text-decoration: none;
   display: block;
@@ -102,6 +101,7 @@ header .nav-btn {
   header .nav-btn {
     visibility: visible;
   }
+
   header nav {
     display: flex;
     flex-direction: column;
@@ -141,6 +141,7 @@ header .nav-btn {
     font-size: 18px;
     padding: 10px;
   }
+
   .dropbtn {
     border: none;
     padding-right: 20px;

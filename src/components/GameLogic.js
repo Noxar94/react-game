@@ -19,9 +19,14 @@ const GameLogic = () => {
   function handleSubmit(event) {
     // prevent default from refreshing.
     event.preventDefault();
+
+    if (difficulty === "None") {
+      setResponse("Select a difficulty first!");
+      return;
+    }
     const userGuess = parseInt(guess);
 
-    // each guess press add 1 to state.
+    // each guess press, add 1 to state.
     if (userGuess) {
       setTries(tries + 1);
     }
@@ -71,7 +76,7 @@ const GameLogic = () => {
             <br />
             <p>Difficulty: {difficulty}</p>
             <select onChange={handleDifficulty}>
-              <option value="None">Set difficulty</option>
+              <option value="None">Set Difficulty</option>
               <option value="Easy"> Between 1-10</option>
               <option value="Medium">Between 1-50</option>
               <option value="Hard">Between 1-100</option>
@@ -89,7 +94,7 @@ const GameLogic = () => {
             <button id="game-btn" type="submit">
               Guess it
             </button>
-            <p className="tries-text">tries:{tries}</p>
+            <p className="tries-text">Tries:{tries}</p>
           </form>
         </div>
       </div>

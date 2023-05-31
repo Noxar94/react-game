@@ -11,3 +11,13 @@ body {
 .h2-pages {
   color: white;
 }
+
+:root {
+  --home-background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.404);
+  font-family: impact;
+  font-weight: 100;
+  line-height: 25px;
+  font-size: 18px;
+}
