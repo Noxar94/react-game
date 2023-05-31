@@ -38,7 +38,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(70, 70, 70);
+  color: rgb(43, 255, 0);
   transition: all 1s;
 }
 
@@ -77,14 +77,14 @@ header .nav-btn {
   text-align: center;
   display: none;
   position: absolute;
-  background-color: #ff02025e;
+  background-color: #ffe6025e;
   width: 130px;
   z-index: 1;
 }
 
 .dropdown-content a {
   font-size: 18px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   display: block;
 }

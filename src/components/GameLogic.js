@@ -73,8 +73,9 @@ const GameLogic = () => {
       {!gameStarted ? (
         <div className="startbtn-container">
           <button className="start-btn" onClick={startGame}>
-            Start Game
+            Start NumberGame!
           </button>
+          <h3></h3>
         </div>
       ) : (
         <div className="game-container">
