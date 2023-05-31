@@ -20,7 +20,7 @@ export default function Navbar(handleSubmit) {
 
   return (
     <header>
-      <h2>Noxar</h2>
+      <h2>NumberGame</h2>
       <nav ref={navRef}>
         <ul>
           <li>
