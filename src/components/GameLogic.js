@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/GameLogic.css";
 import BackgroundVideo from "../videos/Numbers.mp4";
 
@@ -9,6 +9,7 @@ const GameLogic = () => {
   const [tries, setTries] = useState(0);
   const [randomNumber, setRandomNumber] = useState(makeRandomNumber(null));
   const [difficulty, setDifficulty] = useState("None");
+  const [gameStarted, setGameStarted] = useState(false);
 
   // set guess in state.
   function handleGuess(event) {
@@ -63,41 +64,54 @@ const GameLogic = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  function startGame() {
+    setGameStarted(true);
+  }
+
   return (
     <div className="center-container">
-      <div className="game-container">
-        <video className="BackgroundVideo" autoPlay loop muted>
-          <source src={BackgroundVideo} type="video/mp4" />
-        </video>
-        <div className="gameform-container">
-          <h1>
-            Guess the number in as few tries as possible.
-            <br />
-            <br />
-            <p>Difficulty: {difficulty}</p>
-            <select onChange={handleDifficulty}>
-              <option value="None">Set Difficulty</option>
-              <option value="Easy"> Between 1-10</option>
-              <option value="Medium">Between 1-50</option>
-              <option value="Hard">Between 1-100</option>
-            </select>
-          </h1>
-
-          <form onSubmit={handleSubmit} className="gameform">
-            <p className="response-text">{response}</p>
-            <input
-              placeholder="Guess your number here"
-              type="number"
-              value={guess}
-              onChange={handleGuess}
-            />
-            <button id="game-btn" type="submit">
-              Guess it
-            </button>
-            <p className="tries-text">Tries:{tries}</p>
-          </form>
+      {!gameStarted ? (
+        <div className="startbtn-container">
+          <button className="start-btn" onClick={startGame}>
+            Start Game
+          </button>
         </div>
-      </div>
+      ) : (
+        <div className="game-container">
+          <video className="BackgroundVideo" autoPlay loop muted>
+            <source src={BackgroundVideo} type="video/mp4" />
+          </video>
+          <div className="gameform-container">
+            <h1>
+              Guess the number in as few tries as possible.
+              <br />
+              <br />
+              <p>Difficulty: {difficulty}</p>
+              <select onChange={handleDifficulty}>
+                <option value="None">Set Difficulty</option>
+                <option value="Easy"> Between 1-10</option>
+                <option value="Medium">Between 1-50</option>
+                <option value="Hard">Between 1-100</option>
+              </select>
+            </h1>
+
+            <form onSubmit={handleSubmit} className="gameform">
+              <p className="response-text">{response}</p>
+
+              <input
+                placeholder="Guess your number here"
+                type="number"
+                value={guess}
+                onChange={handleGuess}
+              />
+              <button id="game-btn" type="submit">
+                Guess it
+              </button>
+              <p className="tries-text">Tries:{tries}</p>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,6 +3,7 @@
 }
 
 .center-container {
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,4 +99,25 @@ select {
   border-radius: 20px;
   color: rgb(255, 255, 255);
   font-weight: 800;
+}
+
+.startbtn-container {
+  display: flex;
+}
+
+.start-btn {
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  color: rgb(204, 204, 204);
+  font-size: 32px;
+  background-color: rgba(105, 105, 105, 0.308);
+  box-shadow: 0 0 15px rgb(255, 255, 0);
+}
+
+.start-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 50px rgb(157, 255, 0);
+  transition: 1s;
 }
