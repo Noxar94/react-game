@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import Modal from "../components/Modal";
+import Modal from "./modal.js";
 import { Logout } from "../helpers/index.js";
 
 export default function Navbar(handleSubmit) {
