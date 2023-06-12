@@ -8,15 +8,15 @@ import "../styles/modal.css";
 export default function Modal() {
   const [modal, setModal] = useState(false);
   const [activeComponent, setActiveComponent] = useState("Login");
-
+  // toggle modal
   const toggleModal = () => {
     setModal(!modal);
   };
-
+  // set active component.
   const toggleComponent = () => {
     setActiveComponent(activeComponent === "Login" ? "Register" : "Login");
   };
-
+  // active and no active modal.
   if (modal) {
     document.body.classList.add("active-modal");
   } else {

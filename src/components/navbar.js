@@ -9,10 +9,11 @@ export default function Navbar(handleSubmit) {
   const navRef = useRef();
   const [auth, setAuth] = useState(localStorage.getItem("user") !== null);
 
+  // toggle navbar
   const showNavbar = () => {
     navRef.current.classList.toggle("resp-nav");
   };
-
+  // logout
   function handlelogOut() {
     Logout();
     setAuth(false);

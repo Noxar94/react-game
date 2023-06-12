@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 
 const Login = () => {
+  //states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
+  // check user if email exists
   const checkUser = (users) => {
     const user = users.find(
       (user) => user.email === email && user.password === password
@@ -18,14 +19,16 @@ const Login = () => {
     if (user.email === email && user.password === password) return user;
   };
 
+  //handle submit.
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    // both fields required
     if (email === "" || password === "") {
       alert("all fields are required");
       return;
     }
 
+    // get user, error if no user
     const user = await axios
       .get("/users")
       .then((res) => checkUser(res.data, email, password))
@@ -33,6 +36,7 @@ const Login = () => {
         console.log(error);
       });
 
+    // if logged in navigate, if not alert inc.
     if (user && user.email === email && user.password === password) {
       navigate("/user");
 
